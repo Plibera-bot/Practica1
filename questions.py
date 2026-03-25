@@ -1,15 +1,18 @@
 import random
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
-word = random.choice(words)
+words = {
+    "animales":["perro","gato","leon","tigre"],
+    "lenguajes de programacion": ["python","java","c","javaScript"],
+    "estructuras de datos":["lista","cadena","diccionario"],
+    "tipo de dato":["entero","real","string","boolean","char"]
+}
+print(words.keys())
+while True:
+    categoria=input("elegi una categoria: ").lower()
+    if(categoria in words):
+        word=random.choice(words[categoria])
+        break
+    else:
+        print("categoria invalida, intenta de nuevo")
 guessed = []
 attempts = 6
 
